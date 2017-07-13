@@ -1,6 +1,17 @@
 
 from space import Space
 
+"""
+Board look:
+╔═══╦═══╦═══╗
+║ 7 ║ 8 ║ 9 ║
+╠═══╬═══╬═══╣
+║ 4 ║ 5 ║ 6 ║
+╠═══╬═══╬═══╣
+║ 1 ║ 2 ║ 3 ║
+╚═══╩═══╩═══╝
+"""
+
 
 class Board:
 
@@ -14,12 +25,6 @@ class Board:
                               '7': Space(),
                               '8': Space(),
                               '9': Space()}
-
-    # def check_if_win(self):
-    #     if (self.todo_quarters['1'].is_player() is True and
-    #         self.todo_quarters['2'].is_player() is True and
-    #         self.todo_quarters['3'].is_player() is True):
-    #         return True
 
     def __str__(self):
         mark1 = self.todo_quarters['1'].return_sign()
@@ -41,13 +46,3 @@ class Board:
         view_board.append('╚═══╩═══╩═══╝')
 
         return '\n'.join(view_board)
-
-    """
-    ╔═══╦═══╦═══╗
-    ║ 7 ║ 8 ║ 9 ║
-    ╠═══╬═══╬═══╣
-    ║ 4 ║ 5 ║ 6 ║
-    ╠═══╬═══╬═══╣
-    ║ 1 ║ 2 ║ 3 ║
-    ╚═══╩═══╩═══╝
-    """
