@@ -29,7 +29,6 @@ class Application:
     PLAYER_SPACES = []
     AI_SPACES = []
 
-
     def __init__(self):
         self.is_game_over = False
 
@@ -37,13 +36,8 @@ class Application:
         os.system('clear')
         board = Board()
 
-
         while not self.is_game_over:
             os.system('clear')
-
-            # if len(self.POSSIBLE_SPACES) < 1:
-            #     print('The board is full')
-            #     self.is_game_over = False
 
             self.display_clean_board()
             print(board)
